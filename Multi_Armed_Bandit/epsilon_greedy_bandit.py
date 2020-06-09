@@ -28,8 +28,8 @@ def run_exp ( m1 , m2 , m3 , eps , N ) :
             j = np.random.choice(3) 
         else: 
             j = np.argmax([a.mean for a in bandits]) 
-            x = bandits[j].choose() 
-            bandits[j].update(x) 
+        x = bandits[j].choose() 
+        bandits[j].update(x) 
         
         # for the plot 
         data[i] = x 
